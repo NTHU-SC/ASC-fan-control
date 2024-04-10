@@ -11,9 +11,8 @@ duty_cycle=$1
 
 # 变量定义
 host="https://10.123.64.22"
-cookie="lang=zh-tw; QSESSIONID=b585f49836285cc74f2S3yLhZq0TGZdR; refresh_disable=1"
-csrf_token="Xqlgd0XY"
-request_with="XMLHttpRequest"
+cookie="lang=zh-tw; QSESSIONID=d16c449ea52f36f7e14xYYkNNcaSp7Y7; refresh_disable=1"
+csrf_token="kl2YVRJA"
 
 if [ "$duty_cycle" = "auto" ]; then
 
@@ -24,7 +23,7 @@ curl "$host/api/settings/fans-mode" \
   -H "Cookie: $cookie" \
   -H "Origin: $host" \
   -H "X-CSRFTOKEN: $csrf_token" \
-  -H "X-Requested-With: $request_with" \
+  -H "X-Requested-With: XMLHttpRequest" \
   --data-raw '{"control_mode":"auto"}' \
   --insecure
 else 
@@ -36,7 +35,7 @@ curl "$host/api/settings/fans-mode" \
   -H "Cookie: $cookie" \
   -H "Origin: $host" \
   -H "X-CSRFTOKEN: $csrf_token" \
-  -H "X-Requested-With: $request_with" \
+  -H "X-Requested-With: XMLHttpRequest" \
   --data-raw '{"control_mode":"manual"}' \
   --insecure
 
@@ -49,7 +48,7 @@ for ((i=1; i<=12; i++)); do
         -H "Cookie: $cookie" \
         -H "Origin: $host" \
         -H "X-CSRFTOKEN: $csrf_token" \
-        -H "X-Requested-With: $request_with" \
+        -H "X-Requested-With: XMLHttpRequest" \
         --data-raw "{\"duty\":$duty_cycle}" \
         --insecure &
 done

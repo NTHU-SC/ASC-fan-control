@@ -11,8 +11,8 @@ duty_cycle=$1
 
 # 变量定义
 host="https://10.123.64.24"
-cookie="lang=zh-tw; QSESSIONID=b585f49836285cc74f2S3yLhZq0TGZdR; refresh_disable=1"
-csrf_token="Xqlgd0XY"
+cookie="lang=zh-tw; QSESSIONID=a85a34a1b90704cd16sSSPeHAv08k7l2; refresh_disable=1"
+csrf_token="CjSOeXa9"
 request_with="XMLHttpRequest"
 
 if [ "$duty_cycle" = "auto" ]; then
